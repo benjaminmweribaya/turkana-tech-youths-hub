@@ -84,3 +84,110 @@ strong {
 .nav-link {
     color: white !important;
 }
+
+/* Custom styles for the sections */
+.section {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 500px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .lightbox-gallery {
+    display: grid;
+    gap: 10px;
+  }
+
+  /* Grid layout for larger screens */
+  @media (min-width: 768px) {
+    .lightbox-gallery {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* Adjust the grid for medium screens */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .lightbox-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Full-width image with parallax for Smart Climate School */
+  .parallax-container {
+    position: relative;
+    height: 400px;
+    background: url('./Ekicholong.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+  }
+
+  .parallax-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  /* Awards and Grants Slider Styles */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider-content {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+    transition: background-color 0.3s;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
