@@ -1,193 +1,284 @@
+/* Global Styles */
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    padding: 20px;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  /* Light background color for a softer look */
+  color: black;
+  /* Dark gray for better readability */
+  line-height: 1.6;
+  padding-top: 80px;
+  /* Prevent content from being hidden behind the fixed navbar */
 }
 
-h1 {
-    color: red;
-    text-align: center;
-    margin-bottom: 20px;
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
+/* Header Styles */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
+.navbar {
+  background-color: green;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Light shadow for elevation */
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: black;
+  margin-right: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+  /* Highlight color on hover */
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1,
 h2 {
-    color: #28a745;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  color: black;
+  /* Blue for a pop of color */
+  margin-bottom: 20px;
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 20px;
+/* List Group for Core Values */
+.list-group-item {
+  background-color: #f8f9fa;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-li {
-    margin-bottom: 20px;
+/* Partner Images */
+#partners img {
+  margin: 20px auto;
 }
 
-strong {
-    color: #dc3545;
+/* Activities Styles */
+.swiper-container {
+  width: 100%;
+  height: auto;
+  margin-left: 0%;
+  margin-right: 0%;
 }
 
-#footer-logo {
-    max-width: 100%;
-    height: auto;
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-left: 0px;
+  border-radius: 100px;
+  margin-right: 0%;
 }
 
-.hidden {
-    display: none;
+.swiper-slide {
+  margin-right: 0px;
+  /* Ensures no extra margin is added between slides */
+  padding: 0;
+  /* Reduces internal padding within the slides */
 }
 
-.bg-red {
-    background-color: red;
+.lightbox-gallery img {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
-.text-white {
-    color: white;
+/* Parallax Container */
+.parallax-container {
+  background: url('./Ekicholong.jpg') center / cover fixed;
+  height: 200px;
+  width: auto;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#navbarNav {
-    position: fixed;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: red;
-    transition: right 0.3s;
+.parallax-text {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-#navbarNav.show {
-    right: 0;
+/* Form Styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.navbar-toggler-icon {
-    background-image: url('data:image/svg+xml;base64,...');
-    /* Update with white icon */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-.nav-link {
-    color: white !important;
+/* Donate Section */
+#donate {
+  background-color: #e9ecef;
+  padding: 40px 20px;
 }
 
-/* Custom styles for the sections */
-.section {
-    margin: 40px auto;
-    max-width: 1200px;
-    padding: 20px;
-  }
+button.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
 
-  .swiper-container {
-    width: 100%;
-    height: 500px;
-  }
+/* Awards Slider */
+.slider-container {
+  position: relative;
+  width: 50%;
+  /* Increase width for better visibility */
+  max-width: 800px;
+  /* Limit the maximum width */
+  height: 700px;
+  /* Set a fixed height */
+  margin: 40px auto;
+  /* Add margin for spacing */
+  overflow: hidden;
+  /* Hide overflow to prevent content from going outside */
+  border-radius: 50px;
+  /* Rounded corners for a nicer look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow */
+}
 
-  .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.slider-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
-  .lightbox-gallery {
-    display: grid;
-    gap: 10px;
-  }
+.slide {
+  min-width: 100%;
+  height: 100%;
+  /* Set height to match the container */
+  transition: opacity 1s;
+}
 
-  /* Grid layout for larger screens */
-  @media (min-width: 768px) {
-    .lightbox-gallery {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
+.slide img {
+  width: 100%;
+  height: 100%;
+  /* Ensure images fit within the slider's height */
+  object-fit: cover;
+  /* Crop the image to fill the container, maintaining aspect ratio */
+  border-radius: 50px;
+  /* Keep border-radius consistent */
+}
 
-  /* Adjust the grid for medium screens */
-  @media (min-width: 576px) and (max-width: 767px) {
-    .lightbox-gallery {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+/* Navigation Buttons */
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
 
-  /* Full-width image with parallax for Smart Climate School */
-  .parallax-container {
-    position: relative;
-    height: 400px;
-    background: url('./Ekicholong.jpg') no-repeat center center / cover;
-    background-attachment: fixed;
-  }
+button.prev {
+  left: 10px;
+}
 
-  .parallax-text {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+button.next {
+  right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Contact Section */
+.contact-form {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  color: black;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-nav {
     text-align: center;
   }
 
-  /* Awards and Grants Slider Styles */
-.slider-container {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
+  .navbar-nav .nav-link {
+    margin-right: 0;
   }
-  
-  .slider-content {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .slide {
-    min-width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .slide img {
+
+  .lightbox-gallery img {
     width: 100%;
     height: auto;
-    display: block;
   }
-  
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 2;
-    transition: background-color 0.3s;
+
+  .parallax-container {
+    height: 200px;
   }
-  
-  .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+
+  .slider-container {
+    width: 90%;
+    /* Slightly increase the width for smaller screens */
+    height: 300px;
+    /* Reduce height */
   }
-  
-  .prev {
-    left: 10px;
+
+  button.prev,
+  button.next {
+    font-size: 18px;
   }
-  
-  .next {
-    right: 10px;
-  }
-  
+}
+
+.hidden {
+  display: none;
+}
